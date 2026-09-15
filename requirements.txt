@@ -1,0 +1,10 @@
+# PyTorch with CUDA -- install from https://pytorch.org for your GPU, e.g.
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+torch>=2.0
+torchvision>=0.15
+numpy
+Pillow
+
+# Pinned below 6 on purpose: gradio 6 requires anyio>=4 (this environment has
+# anyio 3.7.1) and drags in Pillow 12, which breaks streamlit's pillow<12 pin.
+gradio>=5,<6
